@@ -12,5 +12,7 @@ import { Component } from "@angular/core";
 })
 export class CoursesComponent {
   title = "List of courses"
-  courses =["course1", "course2", "course3"]
+  courses
+
+  //Logic for calling an HTTP service
 }
