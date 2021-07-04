@@ -1,4 +1,5 @@
-import {Point} from './point'
+import { likeComponent } from "./like.component";
 
-let point = new Point(1, 2);
-point.draw()
+let component = new likeComponent(10, true)
+component.onClick()
+console.log(`likesCount: ${component._likesCount}, isSelected: ${component._isSelected}`)
