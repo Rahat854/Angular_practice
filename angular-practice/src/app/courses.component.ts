@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
   selector: 'courses',
   template: `
   <h2>{{ title }}</h2>
-  <button class = "btn btn-primary" [class.active]>Add</button>
+  <button [style.background.color] = "isActive ? 'blue' : 'white'"[class.active] = "isActive">Add</button>
   `
 })
 export class CoursesComponent {
