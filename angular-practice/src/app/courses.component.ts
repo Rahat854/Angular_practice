@@ -1,5 +1,6 @@
 import { CourseService } from "./courses.service";
 import { Component } from "@angular/core";
+
 @Component({
   selector: 'courses',
   template: `
@@ -7,7 +8,7 @@ import { Component } from "@angular/core";
   <div (click) = "onDivClicked()">
   <button (click) = "onSave($event)">Add</button>
   </div> -->
-  <input (keyup.enter) = "onKeyUp()" />
+  <input [(ngModel)]="Email" (keyup.enter)="onKeyUp()" />
   `
 })
 export class CoursesComponent {
@@ -22,7 +23,8 @@ export class CoursesComponent {
   //   console.log('Button is clicked',$event)
   // }
   // //Logic for calling an HTTP service
+  Email = "me@gmail.com"
   onKeyUp() {
-      console.log('enter was pressed')
+      console.log(this.Email)
   }
 }
