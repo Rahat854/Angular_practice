@@ -10,6 +10,4 @@ class Point {
 }
 
 let point = new Point()
-point.x = 1
-point.y = 2
 point.draw()
