@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   post = {
-    title= 'Title',
+    title: "Title",
     isFavorite : true
   }
 }
