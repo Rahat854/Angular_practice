@@ -5,14 +5,16 @@ import { EventEmitter } from '@angular/core';
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.scss'],
+  styles:[
+    `
+      
+    `
+  ]
 })
-export class FavoriteComponent implements OnInit {
- @Input('isFav') isFavorite: boolean = false
+export class FavoriteComponent  {
  @Output('change') click = new EventEmitter()
+ @Input('isFav') isFavorite: boolean = false
   constructor() { }
-
-  ngOnInit(): void {
-  }
   onClick() {
     this.isFavorite = !this.isFavorite
     this.click.emit({newValue: this.isFavorite})
