@@ -5,11 +5,11 @@
     <p>Some content Here</p>
   </div>
 </bootstrap-panel> -->
-<div *ngIf= "courses.length > 0 then coursesList else noCourse">
+<div [hidden] = "courses.length === 0">
   List of courses
 </div>
-<ng-template #coursesList></ng-template>
+<!-- <ng-template #courseList></ng-template> -->
 
-<ng-template #noCourse>
+<div [hidden] = "courses.length > 0">
   No courses yet
-</ng-template>
+</div>
