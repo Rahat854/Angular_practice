@@ -56,6 +56,12 @@ export class AppComponent {
   //   course.name = 'Updated'
   // }
   // courses = [1, 2] ;
-  canSave = true
+  // canSave = true
+  task = {
+    title: 'Review applications',
+    assignee: {
+      name: 'Rahat Kabir Dhrubo'
+    }
+  }
 }
 
