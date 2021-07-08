@@ -1,15 +1,11 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.scss'],
-  styles:[
-    `
-      
-    `
-  ]
+  encapsulation : ViewEncapsulation.Emulated
 })
 export class FavoriteComponent  {
  @Output('change') click = new EventEmitter()
