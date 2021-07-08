@@ -57,11 +57,12 @@ export class AppComponent {
   // }
   // courses = [1, 2] ;
   // canSave = true
-  task = {
-    title: 'Review applications',
-    assignee: {
-      name: 'Rahat Kabir Dhrubo'
-    }
-  }
+  // task = {
+  //   title: 'Review applications',
+  //   assignee: {
+  //     name: 'Rahat Kabir Dhrubo'
+  //   }
+  // }
+  
 }
 
