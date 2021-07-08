@@ -1,7 +1,15 @@
-<bootstrap-panel >
+<!-- <bootstrap-panel >
   <ng-container class="heading">Heading</ng-container>
   <div class="body">
     <h2>Body</h2>
     <p>Some content Here</p>
   </div>
-</bootstrap-panel>
+</bootstrap-panel> -->
+<div *ngIf= "courses.length > 0 then coursesList else noCourse">
+  List of courses
+</div>
+<ng-template #coursesList></ng-template>
+
+<ng-template #noCourse>
+  No courses yet
+</ng-template>
