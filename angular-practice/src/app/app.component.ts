@@ -7,5 +7,5 @@ import { FavChangedEventArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  courses = []
+  viewMode = ''
 }
