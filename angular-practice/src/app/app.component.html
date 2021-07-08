@@ -44,5 +44,13 @@
   No Courses
 </ng-template> -->
 
-
+<button
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue' : 'gray',
+    'color' : canSave ? 'white': 'black',
+    'fontWeight': canSave ? 'bold' : 'normal'
+  }"
+>
+Save
+</button>
 

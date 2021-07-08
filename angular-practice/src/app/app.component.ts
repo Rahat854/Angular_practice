@@ -55,6 +55,7 @@ export class AppComponent {
   // onChange(course: any) {
   //   course.name = 'Updated'
   // }
-  courses = [1, 2] ;
+  // courses = [1, 2] ;
+  canSave = true
 }
 
