@@ -1,14 +1,11 @@
 <form>
-  <form class="form-group">
-  <form for="fistName">
-    <form id="fistName" class="form-control" type="text">
-  </form>
-  </form>
   <div class="form-group">
-    <label for="comment"></label>
-    <textarea
-     id="comment" cols="30" rows="10" class="form-control">
-    </textarea>
+    <label for="firstName">First Name</label>
+      <input ngModel name="firstName" #firstName ="ngModel" (change)="log(firstName)" id="firstName" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea id="comment" class="form-control" cols="30" rows="10"></textarea>
   </div>
   <button class="btn btn-primary">Submit</button>
 </form>
