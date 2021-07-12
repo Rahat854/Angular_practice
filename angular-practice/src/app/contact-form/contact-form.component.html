@@ -1,9 +1,10 @@
 <form>
-  < class="form-group">
+  <form
+    class="form-group">
     <label for="firstName">
       First Name
     </label>
-      <input
+      <div
         required
         minlength="4"
         maxlength="6"
@@ -15,17 +16,18 @@
         id="firstName"
         class="form-control"
         type="text">
-      <div
-        class="alert alert-danger"
-        *ngIf="firstName.touched && !firstName.valid">
-        <div *ngIf="firstName.errors?.required">
-          First Name is required
-        </div>
-        <div First *ngIf="firstName.errors?.minlength">
+        <div
+          class="alert alert-danger"
+          *ngIf="firstName.touched && !firstName.valid">
+          <div *ngIf="firstName.errors?.required">
+            First Name is required
+          </div>
+          <div First *ngIf="firstName.errors?.minlength">
             First name should be {{firstName.errors?.minlength.requiredLength}} character
-        </div>
-        <div *ngIf="firstName.errors?.pattern">
-          Name doesn't matched with pattern
+          </div>
+          <div *ngIf="firstName.errors?.pattern">
+            Name doesn't matched with pattern
+          </div>
         </div>
       </div>
   <div
