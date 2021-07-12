@@ -28,7 +28,7 @@
           First Name should be {{firstName.errors?.minlength.requiredLength}} character
         </div>
         <div *ngIf="firstName.errors?.pattern">
-          Name doesnot match with the pattern
+          Name doesn't match with the pattern
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
       rows="10">
     </textarea>
   </div>
-  <button class="btn btn-primary">
+  <button class="btn btn-primary" [disabled]="!f.valid">
     Submit
   </button>
 </form>
