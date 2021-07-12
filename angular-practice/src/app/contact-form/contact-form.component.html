@@ -1,50 +1,52 @@
-<form #f="ngForm" (ngSubmit)="submit(f)">
-  <div
-    class="form-group">
-    <label for="firstName">
-      First Name
-    </label>
+<form #f ="ngForm" (ngSubmit)="submit(f)">
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="!contact.valid">...</div>
+    <div
+      class="form-group">
+      <label for="firstName">
+        First Name
+      </label>
       <input
         required
         minlength="4"
-        maxlength="6"
-        pattern="banana"
+        maxlength="10"
+        pattern="Rahat"
         ngModel
         name="firstName"
-        #firstName ="ngModel"
+        #firstName="ngModel"
         (change)="log(firstName)"
         id="firstName"
         class="form-control"
         type="text">
-        <div
-          class="alert alert-danger"
-          *ngIf="firstName.touched && !firstName.valid">
-          <div *ngIf="firstName.errors?.required">
-            First Name is required
-          </div>
-          <div First *ngIf="firstName.errors?.minlength">
-            First name should be {{firstName.errors?.minlength.requiredLength}} character
-          </div>
-          <div *ngIf="firstName.errors?.pattern">
-            Name doesn't matched with pattern
-          </div>
+      <div
+        class="alert alert-danger"
+        *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors?.required">
+          First Name is required
         </div>
-    <div
-      class="form-group">
-      <label for="comment">
-        Comment
-      </label>
-      <textarea
-        id="comment"
-        class="form-control"
-        cols="30"
-        rows="10">
-      </textarea>
+        <div *ngIf="firstName.errors?.minlength">
+          First Name should be {{firstName.errors?.minlength.requiredLength}} character
+        </div>
+        <div *ngIf="firstName.errors?.pattern">
+          Name doesnot match with the pattern
+        </div>
+      </div>
     </div>
-    <button class="btn btn-primary">
-      Submit
-    </button>
   </div>
+  <div class="form-group">
+    <label for="comment">
+      Comment
+    </label>
+    <textarea
+      id="comment"
+      class="form-control"
+      cols="30"
+      rows="10">
+    </textarea>
+  </div>
+  <button class="btn btn-primary">
+    Submit
+  </button>
 </form>
 
 
