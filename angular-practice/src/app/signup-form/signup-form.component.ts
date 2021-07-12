@@ -9,16 +9,10 @@ import {usernameValidator} from "./username.validator";
 })
 export class SignupFormComponent {
   form = new FormGroup({
-    'username': new FormControl('', [
+    'username': new FormControl('',
       Validators.required,
-      Validators.minLength(4),
-      usernameValidator.cannotContainSpace,
-      usernameValidator.shouldBeUnique
-    ]),
-    'password': new FormControl('', [
-      Validators.required,
-      Validators.minLength(8)
-    ]),
+      usernameValidator.shouldBeUnique),
+    'password': new FormControl('', Validators.required),
   })
   get username() {
     return this.form.get('username')

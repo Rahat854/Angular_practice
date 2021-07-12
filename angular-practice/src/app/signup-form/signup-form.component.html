@@ -8,24 +8,15 @@
       id="username"
       type="text"
       class="form-control">
-    <div
-      *ngIf="username?.touched && username?.invalid"
-      class="alert alert-danger">
+    <div *ngIf="username?.pending">Checking for uniqueness</div>
+    <div *ngIf="username?.touched && username?.invalid" class="alert alert-danger">
         <div *ngIf="username?.errors?.required">
           Username is required
-        </div>
-        <div *ngIf="username?.errors?.minlength">
-          Username should be greater than {{ username?.errors?.minlength.requiredLength}} character
-        </div>
-        <div *ngIf="username?.errors?.cannotContainSpace">
-          Cannot contain space
         </div>
         <div *ngIf="username?.errors?.shouldBeUnique">
           Username is already taken
         </div>
-
     </div>
-
     <label for="password">Password</label>
     <input
       formControlName="password"
