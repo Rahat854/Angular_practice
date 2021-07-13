@@ -10,12 +10,12 @@ export class NewCourseFormComponent {
   form
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      name:['',Validators.required]
+      name:['',Validators.required],
       contact: fb.group({
         email:[],
         phone:[]
       }),
-      topics: fb.array([])
+      topics : fb.array([])
     })
   }
  //  FormControl: any;
@@ -30,5 +30,6 @@ export class NewCourseFormComponent {
  // }
  //  get topics() {
  //    return this.form.get('topics') as FormArray
-  }
+ //  }
+  topics: any;
 }
