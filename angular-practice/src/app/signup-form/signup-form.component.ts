@@ -9,13 +9,15 @@ import {usernameValidator} from "./username.validator";
 })
 export class SignupFormComponent {
   form = new FormGroup({
-    'username': new FormControl('',
-      Validators.required,
-      usernameValidator.shouldBeUnique),
-    'password': new FormControl('', Validators.required),
-  })
+    account: new FormGroup({
+      'username': new FormControl('',
+        Validators.required,
+        usernameValidator.shouldBeUnique),
+      'password': new FormControl('', Validators.required),
+    })
+    })
   get username() {
-    return this.form.get('username')
+    return this.form.get('account.username')
   }
   login() {
     this.form.setErrors({
@@ -23,6 +25,6 @@ export class SignupFormComponent {
     })
   }
   get password() {
-    return this.form.get('password')
+    return this.form.get('account.password')
   }
 }
