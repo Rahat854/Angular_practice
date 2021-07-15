@@ -7,15 +7,12 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent{
-  title = 'Posts'
+  private url = 'https://jsonplaceholder.typicode.com/posts'
   posts:any = []
   constructor(private http:HttpClient) {
-  }
-  getData() {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    this.http.get(url).subscribe((res) => {
-      this.posts = res
-      console.log(this.posts)
-    })
+    this.http.get(this.url)
+      .subscribe(res=>{
+        console.log(res);
+      })
   }
 }
